@@ -96,6 +96,13 @@ textarea:focus {
     animation: fadeIn 1s ease-out;
 }
 
+.sticky-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
