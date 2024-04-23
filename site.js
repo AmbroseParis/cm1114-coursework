@@ -31,16 +31,5 @@ function setupSmoothScroll() {
     }
 }
 
-function makeNavbarSticky() {
-    const navbar = document.querySelector('.navbar');
-    const stickyOffset = navbar.offsetTop;
 
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset >= stickyOffset) {
-            navbar.classList.add('sticky-top');
-        } else {
-            navbar.classList.remove('sticky-top');
-        }
-    });
-}
 

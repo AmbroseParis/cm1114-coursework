@@ -1,54 +1,51 @@
 body {
     background-color: #292121;
     color: #c26939;
-    font-family: 'Times New Roman', serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
-header h1 {
+header {
     background-color: #404040;
     color: #f9f9f9;
     padding: 20px 0;
-    text-align: center;
-    width: 100%;
-}
-
-title {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    text-align: center; /* centering the text of the page headings */
 }
 
 .navbar {
     background-color: #333;
-     display: flex;
-    justify-content: center;
-    width: 100%;
+    display: flex;
+    justify-content: center; /* centering the navbar */
 }
 
 .navbar-collapse {
-     justify-content: center;
+    justify-content: center;
 }
+
 .nav-link {
     color: #ddd;
     font-size: 16px;
     font-weight: bold;
+    margin: 0 10px; /* spacing between navigation links */
 }
 
 .nav-link:hover,
 .nav-link:focus {
     color: #a5a5a5;
     text-decoration: none;
+    transition: color 0.3s ease; /* smooth transition for hover effect */
 }
 
 main {
     padding: 20px 0;
     background-color: #ffffff;
     border-top: 5px solid #666;
+    text-align: left; /* left aligning the main content  */
 }
 
 table {
     width: 100%;
     background-color: #fff;
+    margin: 0 auto; /* centering tables */
 }
 
 th {
@@ -75,6 +72,7 @@ footer {
 .btn-primary:hover {
     background-color: #666;
     border-color: #555;
+    transition: background-color 0.3s ease; /* smooth transition for button hover */
 }
 
 input[type="text"],
@@ -89,35 +87,68 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     border-color: #888;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* subtle focus highlight */
+    transition: border-color 0.3s ease; /* smooth transition for focus */
 }
 
-.mt-4 {
-    margin-top: 1.5rem;
+/* this makes each row of the table highlighted a different colour depending if it's odd or even */
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
 }
 
-.mb-3 {
-    margin-bottom: 1rem;
-}
-
-.nav-link:hover {
-    color: #8d3213; 
-    transition: color 0.3s ease-in-out;
+tr:nth-child(even) {
+    background-color: #eee;
 }
 
 
-.main-header {
-    animation: fadeIn 1s ease-out;
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
 
-.sticky-top {
-    position: fixed;
-    top: 0;
+.video-frame {
+    border: 10px solid #503f3f; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
+    border-radius: 4px; 
+    overflow: hidden; 
+    background-color: #000; 
+    width: 30%; 
+}
+
+.video-frame iframe {
     width: 100%;
-    z-index: 1000;
+    height: auto;
+    aspect-ratio: 16 / 9; 
+    display: float; 
+}
+
+@media (max-width: 800px) {
+    .video-frame {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 600px) {
+    .video-frame {
+        width: 90%; 
+    }
 }
 
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+.main-header {
+    animation: fadeIn 1s ease-out; /* applying minimal animation on page load */
+}
+
+.fade-enter, .fade-exit {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+.fade-enter-active, .fade-exit-active {
+    opacity: 1;
 }
