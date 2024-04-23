@@ -6,7 +6,7 @@ body {
 
 header {
     background-color: #404040;
-    color: #f9f9f9;
+    color: #a67272;
     padding: 20px 0;
     text-align: center; /* centering the text of the page headings */
 }
@@ -22,7 +22,7 @@ header {
 }
 
 .nav-link {
-    color: #ddd;
+    color: #766350;
     font-size: 16px;
     font-weight: bold;
     margin: 0 10px; /* spacing between navigation links */
@@ -37,20 +37,20 @@ header {
 
 main {
     padding: 20px 0;
-    background-color: #ffffff;
+    background-color: #4a2525;
     border-top: 5px solid #666;
     text-align: left; /* left aligning the main content  */
 }
 
 table {
     width: 100%;
-    background-color: #fff;
+    background-color: #9c9191;
     margin: 0 auto; /* centering tables */
 }
 
 th {
     background-color: #555;
-    color: #fff;
+    color: #ba8c8c;
 }
 
 td {
