@@ -108,6 +108,7 @@ tr:nth-child(even) {
     gap: 20px;
 }
 
+/* reference for making it look pretty https://css-tricks.com/almanac/properties/o/overflow/ */
 .video-frame {
     border: 10px solid #503f3f; 
     box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
